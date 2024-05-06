@@ -159,11 +159,11 @@ setupListeners();  // Setup listeners after initial content setup
 observer.observe(document.body, { childList: true, subtree: true });
 
 function to_right() {
-    console.log(progress[cnt]);
+    
+    if(cnt<2 && cnt >= 0){
     progress[cnt].style = "color:black";
     progress[cnt+1].style = "color:white";
     cnt++;
-    if(cnt<3 && cnt > -1){
     option_section.innerHTML = pages[cnt];
     console.log(progress[cnt]);
 
@@ -171,25 +171,21 @@ function to_right() {
     }
     else{
         alert('!');
-        cnt--;
         console.log(cnt);
 
     }
 }
 
 function to_left() {
+    if(cnt < 3 && cnt > 0){
     progress[cnt].style = "color:black";
     progress[cnt-1].style = "color:white";
     cnt--;
-    if(cnt < 3 && cnt > -1){
     option_section.innerHTML = pages[cnt];
-
-
     setupListeners();  // Re-setup listeners after content change
     }
     else{
         alert('!');
-        cnt++;
         console.log(cnt);
     }
 }
