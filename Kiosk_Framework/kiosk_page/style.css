@@ -15,8 +15,7 @@ body{
 .outline{
     width: 720px;
     height: 1280px;
-    border: #E2E2E2;
-    border: 1px solid;
+    border: 1px solid #DCDCDC;
 }
 
 .header{
@@ -124,8 +123,7 @@ body{
 .option_footer{
     width:100%;
     height: 221px;
-    border: #E2E2E2;
-    border: 1px solid;
+    border: 1px solid #E2E2E2;
     display: flex;
     float:left;
 }
